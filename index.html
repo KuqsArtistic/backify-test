@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>Backify.co</title>
+
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+<img class="logo" src="Logo.svg" alt="Logo">
+
+<!--<video id="bg" class="video" width="25%" height="25%" style="position: absolute; filter: grayscale(100%); opacity: 15%" src="bg.mp4" muted loop autoplay></video>-->
+<audio id="audiolol" src="lol.mp3" autoplay muted></audio>
+
+<script>
+    document.body.addEventListener('click', _ => {
+        document.getElementById("audiolol").muted = false;
+        document.getElementById("audiolol").play();
+    });
+</script>
+
+<canvas></canvas>
+
+<!--<script>-->
+<!--    function rgbToPointerColor(color) {-->
+<!--        let c = color.split(" ");-->
+<!--        let hue = RGBToHue(c[0], c[1], c[2]);-->
+<!--        let c2 = HSVtoRGB(hue/360, 1.0, 1.0);-->
+<!--        c2.r *= 0.15;-->
+<!--        c2.g *= 0.15;-->
+<!--        c2.b *= 0.15;-->
+<!--        return c2;-->
+<!--    }-->
+
+<!--    function HSVtoRGB (h, s, v) {-->
+<!--        let r, g, b, i, f, p, q, t;-->
+<!--        i = Math.floor(h * 6);-->
+<!--        f = h * 6 - i;-->
+<!--        p = v * (1 - s);-->
+<!--        q = v * (1 - f * s);-->
+<!--        t = v * (1 - (1 - f) * s);-->
+
+<!--        switch (i % 6) {-->
+<!--            case 0: r = v, g = t, b = p; break;-->
+<!--            case 1: r = q, g = v, b = p; break;-->
+<!--            case 2: r = p, g = v, b = t; break;-->
+<!--            case 3: r = p, g = q, b = v; break;-->
+<!--            case 4: r = t, g = p, b = v; break;-->
+<!--            case 5: r = v, g = p, b = q; break;-->
+<!--        }-->
+
+<!--        return {-->
+<!--            r,-->
+<!--            g,-->
+<!--            b-->
+<!--        };-->
+<!--    }-->
+
+<!--    function RGBToHue(r, g, b) {-->
+<!--        // Find greatest and smallest channel values-->
+<!--        let cmin = Math.min(r,g,b),-->
+<!--            cmax = Math.max(r,g,b),-->
+<!--            delta = cmax - cmin,-->
+<!--            h = 0,-->
+<!--            s = 0,-->
+<!--            l = 0;-->
+
+<!--        // Calculate hue-->
+<!--        // No difference-->
+<!--        if (delta == 0)-->
+<!--            h = 0;-->
+<!--        // Red is max-->
+<!--        else if (cmax == r)-->
+<!--            h = ((g - b) / delta) % 6;-->
+<!--        // Green is max-->
+<!--        else if (cmax == g)-->
+<!--            h = (b - r) / delta + 2;-->
+<!--        // Blue is max-->
+<!--        else-->
+<!--            h = (r - g) / delta + 4;-->
+
+<!--        h = Math.round(h * 60);-->
+
+<!--        // Make negative hues positive behind 360°-->
+<!--        if (h < 0)-->
+<!--            h += 360;-->
+
+<!--        return h;-->
+<!--    }-->
+
+<!--    console.log(rgbToPointerColor("0.9058823529411765 0.3764705882352941 0.5254901960784314"));-->
+<!--</script>-->
+
+<!--<script src="visualizer.js"></script>-->
+<script src="script.js"></script>
+</body>
+</html>
